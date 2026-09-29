@@ -55,6 +55,7 @@ Plug('rafamadriz/friendly-snippets')
 Plug('saghen/blink.cmp', {['tag'] = 'v1.*'}) -- for autocompletions
 Plug('sphamba/smear-cursor.nvim') -- for cursor smearing
 Plug('rcarriga/nvim-notify') -- for notifcation window
+Plug('ahmedkhalf/project.nvim') -- for project management
 vim.call('plug#end')
 -- move config and plugin config to alternate files
 require("config.theme")
@@ -81,6 +82,7 @@ vim.defer_fn(function()
 		--this only makes a difference of +-10ms on initial startup
 	require("plugins.autopairs")
 	require("plugins.fzf-lua")
+	require("plugins.project")
 	require("plugins.nvim-tree")
 	require("plugins.treesitter")
 	require("plugins.twilight")
